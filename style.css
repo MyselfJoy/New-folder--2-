@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+*{
+    margin: ;
+    padding: ;
+    
+    box-sizing: ;
+}
+ body{
+    background-color: black;
+    color: white;
+    
+ }
+ #header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/image.jpg);
+    background-size: cover;
+    background-position: right;
+    
+}
+.container{
+   padding: 10px 10%;
+}
+ 
+nav{
+  font-family: "Oswald", sans-serif;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: ;
+}
+.logo{
+   width: 100 px;
+
+}
+ nav ul li{
+   display: inline-block;
+   list-style: none;
+   margin: 10px 20px;
+
+ }
+ nav ul li a{
+   color: #fff;
+   text-decoration: none;
+   font-size: 18px;
+   position: relative;
+
+ }
+ nav ul li::after{
+   content: '';
+   width: 0%;
+   height: 1%;
+   background:#fff;
+   position: absolute;
+   left: 0;
+   bottom: -10px;
+   transition: 0.5s;
+ }
+ nav ul li:hover::after{
+   width: 100%;
+ }
+ .header-text{
+   margin-top: 70%;
+   font-size: 50px;
+ }
+ .header-text h1]{
+   font-size: 90%;
+   margin-top: 60px;
+ }
+ .header-text h1 span{
+   color: #000000;
+ }
+ /*---------about---------*/
+ #about{
+   padding: 80px 0 ;
+   color: #ababab;
+   
+ }
+ .row{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+ }
+
+ .About-col-1{
+  flex-basis: 35%;
+  
+ }
+ .About-col-1 img{
+  width: 100%;
+  border-radius: 15px;
+ }
+ .About-col-2{
+  flex-basis: 60%;
+ }
+ 
+ .sub-title{
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+ }
+ .tab-titles{
+  display: flex;
+  margin: 20px 0 40px;
+ }
+ .tab-links{
+  margin-right: 60px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+ }
+ .tab-links::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+
+ }
+ .tab-links.active-link::after{
+  width: 3%;
+ }
+ .tab-contents ul li{
+  list-style: none;
+  margin: 10px 0;
+
+ }
+ .tab-contents ul li span{
+  color: #fff;
+  font-size: 14px;
+  
+ }
+ .tab-contents{
+  display: block;
+ }
+ .tab-contents.active-tag{
+  display: block;
+ }
+
+/*---------------services---------------*/
+ #services{
+  padding: 30px 0;
+ }
+ .services-list{
+  display: grid;
+  grid-template-columns: (auto-fit,minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+ }
+ .services-list div{
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-right: 10px;
+ }
