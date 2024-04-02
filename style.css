@@ -63,7 +63,7 @@ nav{
    margin-top: 70%;
    font-size: 50px;
  }
- .header-text h1]{
+ .header-text h1{
    font-size: 90%;
    margin-top: 60px;
  }
@@ -141,6 +141,16 @@ nav{
   display: block;
  }
 
+ .tab-contents{
+  background-color: black;
+  border-style: solid;
+  border-color: #FF914D;
+  padding: 80px;
+  margin: 5;
+  width: 400px;
+  border-radius: 10px;
+ }
+
 /*---------------services---------------*/
  #services{
   padding: 30px 0;
@@ -162,10 +172,14 @@ nav{
   display: flex;
   flex-wrap: wrap;
 }
-.boxx{
-  background-color: black;
+.servicers-list div i{
+font-size: 50px;
+margin-bottom: 30px;
+}
+  .boxx{
+  background-color:#262626;
   border-style: solid;
-  border-color: yellow;
+  border-color:#ababab;
   padding: 50px;
   margin: 10px;
   width: 200px;
