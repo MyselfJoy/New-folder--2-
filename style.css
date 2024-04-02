@@ -145,10 +145,13 @@ nav{
   background-color: black;
   border-style: solid;
   border-color: #FF914D;
-  padding: 80px;
+  padding: 20px;
   margin: 5;
   width: 400px;
   border-radius: 10px;
+ }
+ .tab-contents li{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  }
 
 /*---------------services---------------*/
