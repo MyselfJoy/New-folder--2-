@@ -145,10 +145,13 @@ nav{
   background-color: black;
   border-style: solid;
   border-color: #FF914D;
-  padding: 80px;
+  padding: 20px;
   margin: 5;
   width: 400px;
   border-radius: 10px;
+ }
+ .tab-contents li{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  }
 
 /*---------------services---------------*/
@@ -184,4 +187,33 @@ margin-bottom: 30px;
   margin: 10px;
   width: 200px;
   border-radius: 10px;
+}
+.myType{
+  color:#FF914C ;
+}
+
+.cursor {
+  animation: blink 0.5s infinite;
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.boxx a{
+  background-color: #FF914C;
+      color: white;
+      padding: 10px 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.2s ease-in-out; 
+}
+.boxx a:hover{
+  background-color: #2980b9;
 }
