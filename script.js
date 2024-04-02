@@ -15,22 +15,43 @@ function typeString() {
         var currentString = typedStrings[typedIndex];
         var currentStringLength = currentString.length;
 
-        // Display characters one by one
-        myTypeSpan.textContent = currentString.substring(0, myTypeSpan.textContent.length + 1);
-
-        // Schedule next character typing
-        if (myTypeSpan.textContent.length < currentStringLength) {
-            typedTimeout = setTimeout(typeString, 100); // Typing speed: 100ms
+        // Remove characters one by one
+        if (myTypeSpan.textContent.length > 0) {
+            myTypeSpan.textContent = currentString.substring(0, myTypeSpan.textContent.length - 1);
+            typedTimeout = setTimeout(typeString, 50); // Typing speed: 50ms
         } else {
-            // If current string is fully typed, move to the next string after 1 second
+            // Once all characters are removed, type the next string
             typedIndex++;
-            setTimeout(typeString, 1000); // Wait for 1 second before typing the next string
+            setTimeout(typeNextString, 1000); // Wait for 1 second before typing the next string
         }
     } else {
         // Reset index to loop through strings again
         typedIndex = 0;
         // Restart typing animation
         setTimeout(typeString, 1000);
+    }
+}
+
+// Function to type the next string
+function typeNextString() {
+    // Get the next string to type
+    var nextString = typedStrings[typedIndex];
+    // Get the span element
+    var myTypeSpan = document.querySelector('.myType');
+    // Type the next string character by character
+    typeCharacter(0, nextString, myTypeSpan);
+}
+
+// Function to type a string character by character
+function typeCharacter(index, string, element) {
+    if (index < string.length) {
+        element.textContent += string.charAt(index);
+        setTimeout(function() {
+            typeCharacter(index + 1, string, element);
+        }, 50); // Typing speed: 50ms
+    } else {
+        // Once all characters are typed, start deleting the string
+        setTimeout(typeString, 1000); // Wait for 1 second before deleting the string
     }
 }
 
