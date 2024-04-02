@@ -204,3 +204,16 @@ margin-bottom: 30px;
     opacity: 1;
   }
 }
+.boxx a{
+  background-color: #FF914C;
+      color: white;
+      padding: 10px 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.2s ease-in-out; 
+}
+.boxx a:hover{
+  background-color: #2980b9;
+}
